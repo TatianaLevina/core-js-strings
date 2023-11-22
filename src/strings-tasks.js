@@ -157,6 +157,9 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeFirstOccurrences(str, value) {
+  if (!str.includes(value)) {
+    return str;
+  }
   return (
     str.slice(0, str.indexOf(value)) +
     str.slice(str.indexOf(value) + value.length)
